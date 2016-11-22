@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css阴影</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .demo{
+            margin: 50px auto;
+            background: #f0f0f0;
+            width: 1000px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        h3{
+            text-align: center;
+            line-height: 80px;
+            color: #fff;
+            background: #555;
+        }
+        section{
+            width:100%;
+            height: 200px;
+            background: rgba(255,255,255,0.3);
+        }
+        .demo div{
+            width: 120px;
+            height: 120px;
+            margin: 20px;
+            position: relative;
+            left: 100px;
+            float: left;
+            padding: 20px;
+        }
+        pre{
+            padding: 30px 40px 10px;
+            display: block;
+            background: rgba(0,0,0,0.06);
+        }
+        pre code{
+            font-family: Monaco;
+            color: #444;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        #demo1 section div{
+            background: #9479fa;
+        }
+        #demo2 section div{
+            background: #69D2E7;
+        }
+        #demo3 section div{
+            background: #8ec12d;
+        }
+        #demo4 section div{
+            background: #fca1cc;
+        }
+        .top {
+            box-shadow: 0 -4px 2px -2px rgba(0,0,0,0.4);
+        }
+
+        .right {
+            box-shadow: 4px 0 2px -2px rgba(0,0,0,0.4);
+        }
+
+        .bottom {
+            box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
+        }
+
+        .left {
+            box-shadow: -4px 0 2px -2px rgba(0,0,0,0.4);
+        }
+
+
+        .emphasize-dark {
+            box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+        }
+
+        .emphasize-light {
+            box-shadow: 0 0 0 10px rgba(255,255,255,.25);
+        }
+
+        .emphasize-inset {
+            box-shadow: inset 0 0 7px 4px rgba(255,255,255,.5);
+        }
+
+        .emphasize-border {
+            box-shadow: inset 0 0 0 7px rgba(255,255,255,.5);
+        }
+
+
+
+        .embossed-light {
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+        }
+
+        .embossed-heavy {
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: inset 0 2px 3px rgba(255,255,255,0.3),inset 0 -2px 3px rgba(0,0,0,0.3),
+            0 1px 1px rgba(255,255,255,0.9);
+        }
+
+
+        .light-rounded {
+            border-radius: 3px;
+        }
+
+        .heavy-rounded {
+            border-radius: 8px;
+        }
+
+        .full-rounded {
+            border-radius: 50%;
+        }
+
+        .barrel-rounded {
+            box-sizing: border-box;
+            border-radius: 20px/60px;
+        }
+
+
+        .inline-link-1 {
+            display: inline-block;
+            margin: 0 0.2em;
+            padding: 3px;
+            background: #97CAF2;
+            border-radius: 2px;
+            transition: all 0.3s ease-out;
+
+            /* Font styles */
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+        }
+        .inline-link-1:hover   { background: #53A7EA; }
+        .inline-link-1:active  { background: #C4E1F8; }
+        .inline-link-1:visited { background: #F2BF97; }
+
+
+
+        .inline-link-2 {
+            display: inline-block;
+            border-bottom: 1px dashed rgba(0,0,0,0.4);
+
+            /* Font styles */
+            text-decoration: none;
+            color: #777;
+        }
+
+        .inline-link-2:hover   {
+            border-bottom-style: dotted;
+        }
+        .inline-link-2:active  {
+            border-bottom-style: solid;
+        }
+        .inline-link-2:visited {
+            border-bottom: 1px solid #97CAF2;
+        }
+    </style>
+</head>
+<body>
+<div class="demo" id="demo1">
+    <h3>Directional Box Shadows（定向阴影框）</h3>
+    <section>
+        <div class="top">top</div>
+        <div class="right">right</div>
+        <div class="bottom">bottom</div>
+        <div class="left">left</div>
+    </section>
+    <pre>
+          <code>
+              .top {
+                    box-shadow: 0 -4px 2px -2px rgba(0,0,0,0.4);
+              }
+
+              .right {
+                    box-shadow: 4px 0 2px -2px rgba(0,0,0,0.4);
+              }
+
+              .bottom {
+                    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
+              }
+
+              .left {
+                    box-shadow: -4px 0 2px -2px rgba(0,0,0,0.4);
+              }
+          </code>
+    </pre>
+</div>
+
+<div class="demo" id="demo2">
+    <h3>Emphesized Box Shadows（工程框阴影）</h3>
+    <section>
+        <div class="emphasize-dark">dark</div>
+        <div class="emphasize-light">light</div>
+        <div class="emphasize-inset">inset</div>
+        <div class="emphasize-border">border</div>
+    </section>
+    <pre>
+          <code>
+              .emphasize-dark {
+                  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+              }
+
+              .emphasize-light {
+                  box-shadow: 0 0 0 10px rgba(255,255,255,.25);
+              }
+
+              .emphasize-inset {
+                  box-shadow: inset 0 0 7px 4px rgba(255,255,255,.5);
+              }
+
+              .emphasize-border {
+                  box-shadow: inset 0 0 0 7px rgba(255,255,255,.5);
+              }
+          </code>
+    </pre>
+</div>
+
+
+<div class="demo" id="demo3">
+    <h3>Embossed Box Shadows（浮箱的阴影）</h3>
+    <section>
+        <div class="embossed-light">light</div>
+        <div class="embossed-heavy">heavy</div>
+    </section>
+    <pre>
+          <code>
+              .embossed-light {
+                  border: 1px solid rgba(0,0,0,0.1);
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+              }
+
+              .embossed-heavy {
+                  border: 1px solid rgba(0,0,0,0.1);
+                  box-shadow: inset 0 2px 3px rgba(255,255,255,0.3),
+                  inset 0 -2px 3px rgba(0,0,0,0.3),
+                  0 1px 1px rgba(255,255,255,0.9);
+              }
+          </code>
+    </pre>
+</div>
+
+<div class="demo" id="demo4">
+    <h3>Rounded Borderss（边框）</h3>
+    <section>
+        <div class="light-rounded">light</div>
+        <div class="heavy-rounded">heavy</div>
+        <div class="full-rounded">full</div>
+        <div class="barrel-rounded">barrel</div>
+    </section>
+    <pre>
+          <code>
+              .light-rounded {
+                  border-radius: 3px;
+              }
+
+              .heavy-rounded {
+                  border-radius: 8px;
+              }
+
+              .full-rounded {
+                  border-radius: 50%;
+              }
+
+              .barrel-rounded {
+                  border-radius: 20px/60px;
+              }
+          </code>
+    </pre>
+</div>
+
+<div class="demo" id="demo5">
+    <h3>Background Inline Link（链接背景）</h3>
+    <section>
+        <p style="text-align: center;font-size: 50px; margin-top: 100px;">这文本来显示 <a href="#" class="inline-link-1">点我</a></p>
+    </section>
+    <pre>
+          <code>
+              .inline-link-1 {
+                  display: inline-block;
+                  margin: 0 0.2em;
+                  padding: 3px;
+                  background: #97CAF2;
+                  border-radius: 2px;
+                  transition: all 0.3s ease-out;
+
+                  /* Font styles */
+                  text-decoration: none;
+                  font-weight: bold;
+                  color: white;
+                }
+                .inline-link-1:hover   { background: #53A7EA; }
+                .inline-link-1:active  { background: #C4E1F8; }
+                .inline-link-1:visited { background: #F2BF97; }
+          </code>
+    </pre>
+</div>
+
+<div class="demo" id="demo6">
+    <h3>Underlined Inline Link（带下划线的链接）</h3>
+    <section>
+        <p style="text-align: center;font-size: 50px; margin-top: 100px;">这文本来显示 <a href="#" class="inline-link-2">点我</a></p>
+    </section>
+    <pre>
+          <code>
+              .inline-link-2 {
+                  display: inline-block;
+                  border-bottom: 1px dashed rgba(0,0,0,0.4);
+
+                  /* Font styles */
+                  text-decoration: none;
+                  color: #777;
+              }
+
+              .inline-link-2:hover   {
+                  border-bottom-style: dotted;
+              }
+              .inline-link-2:active  {
+                  border-bottom-style: solid;
+              }
+              .inline-link-2:visited {
+                  border-bottom: 1px solid #97CAF2;
+              }
+          </code>
+    </pre>
+</div>
+</body>
+</html>
